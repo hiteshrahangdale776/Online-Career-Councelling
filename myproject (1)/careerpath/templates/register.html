@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>Career Choice</title>
+	<!-- Favicon-->
+	<link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+	<!-- Font Awesome icons (free version)-->
+	<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+	<!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+	<!-- Core theme CSS (includes Bootstrap)-->
+	<link href="/static/css/styles.css" rel="stylesheet" />
+	<link rel="stylesheet" href="/static/css/temp.css">
+</head>
+
+<body id="page-top">
+	<!-- Navigation-->
+
+	<nav class="navbar navbar-expand-lg  fixed-top" id="mainNav" style="background-color: black;">
+		<div class="container">
+			<a class="navbar-brand" href="#page-top">Career Choice</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				Menu
+				<i class="fas fa-bars ms-1"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+					<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/">AboutUS</a></li>
+					<li class="nav-item"><a class="nav-link" href="/">Career Choice</a></li>
+					<li class="nav-item"><a class="nav-link" href="/">Contact US</a></li>
+					<li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+					<li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section>
+		<div class="conatiner">
+
+			<div class="row">
+				<div class="col-2"></div>
+				<div class="col-6">
+					<h3 style="margin-bottom: 40px;">Registraion Form</h3>
+
+					
+					<form method="POST" action="register" enctype="multipart/form-data">
+
+
+
+						{% csrf_token %}
+
+
+
+
+						<div class="section-x current" id="sec1">
+							<h4 style="margin-bottom: 40px;">Student Personal Details</h4>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Name: </label>
+									<!-- this way is also right but problems yeu shakt do keep name same every where -->
+							
+									<input type="text" id="Name"class="form-control" temp-not-required name="Name">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputPassword4">EmailId: </label>
+									<input type="text" id="EmailId" class="form-control" temp-not-required name="Emailid">
+								</div>
+								<!-- date of birth -->
+								<div class="form-group col-md-6">
+									<label for="inputPassword4">DOB: </label>
+									<input type="date" id="DOB" class="form-control" temp-not-required name="DOB">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputPassword4">Category: </label>
+									<input type="text" id="Category" class="form-control" temp-not-required name="Category">
+								</div>
+							</div>
+							<!-- address -->
+							<div class="form-group">
+								<label for="inputAddress">Address</label>
+								<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"
+									temp-not-required name="Address">
+							</div>
+							<!-- mobile details -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Mobile: </label>
+									<input type="tel" class="form-control" temp-not-required name="Mobile">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputPassword4">Altmobile:</label>
+									<input type="tel" class="form-control" temp-not-required name="Altmobile">
+								</div>
+								<!-- father details -->
+								<div class="form-group col-md-6">
+									<label for="inputPassword4">Father Name: </label>
+									<input type="text" class="form-control" temp-not-required name="FatherName">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputPassword4">Foccupution: </label>
+									<input type="text" class="form-control" temp-not-required name="Foccupation">
+								</div>
+								<!-- Mother details -->
+								<!-- PUT Names now -->
+								<div class="form-group col-md-6">
+									<label for="inputPassword4">Mother Name: </label>
+									<input type="text" class="form-control" temp-not-required name="Mothersname">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputPassword4">Moccupution: </label>
+									<input type="text" class="form-control" temp-not-required name="Moccupation">
+								</div>
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="inputCity">City</label>
+										<input type="text" class="form-control" temp-not-required name="City">
+									</div>
+									<div class="form-group col-md-4">
+										<label for="inputState">State</label>
+										<select id="inputState" class="form-control" temp-not-required name="State">
+											<option selected>Choose...</option>
+											<option value="Maharashtra" > Maharashtra</option>
+											<option value="Hyderabad" > Hyderabad</option>
+											<option value="Uttarpradesh" > Uttarpradesh</option>
+											<option value="Jharkhand" > Jharkhand</option>
+											<option value="Bangaluru" > Bangaluru</option>
+										</select>
+									</div>
+									<div class="form-group col-md-2">
+										<label for="inputZip">Zip</label>
+										<input type="text" class="form-control" temp-not-required name="Zip">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="inputPassword4">Password</label>
+										<input type="password" class="form-control" temp-not-required name="Password">
+										<small id="passwordHelpInline" class="text-muted">
+											Must be 8-20 characters long.
+										</small>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="inputPassword4">Confirm Password</label>
+										<input type="password" class="form-control" temp-not-required name="ConfirmPassword">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="img">Image</label>
+										<input type="file" class="form-control" temp-not-required name="Image">
+									</div>
+									<div class="form-group col-md-6">
+										<label for="inputEmail4">Branch: </label>
+										<input type="text" class="form-control" temp-not-required name="Branch">
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1" style="font-size: 20px;">Resume</label>
+										<input type="file" class="form-control" temp-not-required name="Resume">
+									</div>
+								</div>
+							</div>
+							
+						<label style="margin-bottom: 0;" class="btn btn-primary" onclick="validate_and_go_to_section('sec2')">Next</label>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<div class="section-x" id="sec2">
+							<h4>10th Details</h4>
+							<div class="form-row">
+								<!-- 10 th deatils -->
+	
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">College Name: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="SSCName"> 
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Board Name1: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="BoardName1">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Branch1: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="Branch1">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Percentage: </label>
+									<input type="int" class="form-control" id="inputEmail4" temp-not-required name="Percentage1">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Year of Passing: </label>
+									<input type="number" class="form-control" id="inputEmail4" temp-not-required name=YOP1>
+								</div>
+							</div>
+							<h4>12th Details</h4>
+							<!-- 12 th deatils -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">College Name: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="HSCName">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Board/Diploma Name: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="BoardName2">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Branch: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="Branch2">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Percentage: </label>
+									<input type="int" class="form-control" id="inputEmail4" temp-not-required name="Percentage2">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Year of Passing: </label>
+									<input type="number" class="form-control" id="inputEmail4" temp-not-required name="YOP2">
+								</div>
+							</div>
+							<h4>Graduation Details</h4>
+							<!-- graduation deatils -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">CollegeName1: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="CollegeName1">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">university Name: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="UniversityName1">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Degree Name: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="DegreeName1">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Percentage: </label>
+									<input type="int" class="form-control" id="inputEmail4" temp-not-required name="Percentage3">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Year of Passing: </label>
+									<input type="number" class="form-control" id="inputEmail4" temp-not-required name="YOP3">
+								</div>
+							</div>
+							<!-- pg details -->
+							<h4>Post Graduation Details</h4>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">CollegeName2: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="CollegeName2">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">university Name: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="UniversityName2">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Degree: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="DegreeName2">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Percentage: </label>
+									<input type="int" class="form-control" id="inputEmail4" temp-not-required name="Percentage4">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Year of Passing: </label>
+									<input type="number" class="form-control" id="inputEmail4" temp-not-required name="YOP4">
+								</div>
+							</div> 
+							
+							<label style="margin-bottom: 0;" class="btn btn-primary" onclick="validate_and_go_to_section('sec3')">Next</label>
+						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<div class="section-x " id="sec3">
+							<div class="form-row">
+								<!-- 10 th deatils -->
+	
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Area of Interest</label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="AOI">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Area Of specialization: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="AOS">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Certification:</label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="Cert">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Hobbies : </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="Hobbies">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Special acheivements: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="SpecialA">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="inputEmail4">Extra Curricular Activities: </label>
+									<input type="text" class="form-control" id="inputEmail4" temp-not-required name="ECA">
+								</div>
+							</div>
+							<input  type="submit" class="btn btn-primary" value="Submit">
+							<button type="submit" class="btn btn-primary">Reset</button>
+						</div>
+					</form>
+				</div>
+				
+				<div class="col-4 " style=" border-left: 1px solid #333;">
+					<h3 style="margin-left: 20px; margin-bottom:50px;">Student Details</h3>
+					<div class="btn-group-vertical" style="margin-left: 20px;">
+						<button type="button" id="sec1x" style="background-color: grey;" class="btn btn-primary btn-lg btn-block" onclick="validate_and_go_to_section('sec1')">Student
+								Personal
+								Details</button><br>
+						<button type="button" id="sec2x" class="btn btn-primary btn-lg btn-block" onclick="validate_and_go_to_section('sec2')">Student
+								Academic
+								Details</button><br>
+						<button type="button" id="sec3x" class="btn btn-primary btn-lg btn-block" onclick="validate_and_go_to_section('sec3')">Student Others Details</button> 
+
+					</div>
+				</div>
+				<script type="text/javascript">
+					
+					var current="sec1";
+					function validate_and_go_to_section(sectionid){
+						if(current!=sectionid){
+							if (validate(sectionid)){
+								document.getElementById(current).classList.toggle("current")
+								document.getElementById(current+"x").style.backgroundColor="#ffc800";
+								current=sectionid;
+								document.getElementById(sectionid).classList.toggle("current")
+								document.getElementById(current+"x").style.backgroundColor="grey";
+							}
+						}
+					}
+					function validate(sectionid){
+						let flag=true;
+						if (sectionid=="sec1")
+						{
+							
+						}
+						else if (sectionid=="sec2")
+						{
+
+						}
+						else if (sectionid=="sec3")
+						{
+
+						}
+						else
+						{
+
+						}
+						console.log(flag)
+						return flag;
+					}
+				</script>
+
+	</section>
+</body>
+<footer class="footer py-4">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2021</div>
+			<div class="col-lg-4 my-3 my-lg-0">
+				<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+				<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+				<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<div class="col-lg-4 text-lg-end">
+				<a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+				<a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+			</div>
+		</div>
+	</div>
+</footer>

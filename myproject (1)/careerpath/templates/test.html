@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Career Choice</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style1.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/static/css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+
+    <nav class="navbar navbar-expand-lg  fixed-top" id="mainNav" style="background-color: black;">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Career Choice</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">AboutUS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Career Choice</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Contact US</a></li>
+                    {% if request.session.user_name %}
+                    <h2 >{{request.session.user_name}}</h2>
+                    
+                    <li  class="nav-item"><a  class="nav-link" href="logout">Logout</a></li>
+                     {% else %}
+                     <li class="nav-item"><a href="/register" class="nav-link">Register</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <form>
+                        <h3 style="text-align: center;">Multiple choice questions</h3>
+                        <p><b>Rules and Regulations</b>Make sure that you write your name and student ID correctly.
+                            Otherwise,
+                            the system can't record your grades. The given time for this quiz is 3 minutes. After that,
+                            the form will be closed for you. Students who will not submit their answers in time will
+                            receive 0. You can only submit your answers once. If you wish to pause the the quiz, please
+                            use the Save and Continue Later button. Each question has its own grading points. After you
+                            submit your answers, we will evaluate your answers and let you know your grades later. If
+                            you have any technical problem during the quiz, please take a screenshot or screen recording
+                            and send us.</p>
+                        <div class="container">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label style="font-size: 20px;">Student Name:</label>
+                                        <input type="email" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label style="font-size: 20px;">Branch:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label style="font-size: 20px;">EmailId:</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <h4 style="text-align: center; margin-top:auto; margin-top:20px;">Are You Ready?</h4>
+                                    <center><a href="/timer"> <button type="button" class="btn btn-success btn-lg">Start</button> </a><br></center>
+                                </div>
+                                <!-- <div class="py-2 h5" style="margin-top: 20px;"><b>Q. which option best describes your job role?</b></div>
+                                <div class="ans ml-2">
+                                    <label class="radio"> <input type="radio" name="brazil" value="brazil"> <span>Brazil</span>
+                                    </label>
+                                </div>
+                                <div class="ans ml-2">
+                                    <label class="radio"> <input type="radio" name="Germany" value="Germany"> <span>Germany</span>
+                                    </label>
+                                </div>
+                                <div class="ans ml-2">
+                                    <label class="radio"> <input type="radio" name="Indonesia" value="Indonesia"> <span>Indonesia</span>
+                                    </label>
+                                </div>
+                                <div class="ans ml-2">
+                                    <label class="radio"> <input type="radio" name="Russia" value="Russia"> <span>Russia</span>
+                                    </label>
+                                </div>
+
+                                <div class="d-flex align-items-center pt-3">
+                                    <div id="prev"> <button class="btn btn-primary">Previous</button> </div>
+                                    <div class="ml-auto mr-sm-5"> <button class="btn btn-success">Next</button> </div>
+                                </div> -->
+                        </div>
+                    </form>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </section>
+</body>

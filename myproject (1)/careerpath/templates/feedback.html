@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Career Choice</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style1.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/static/css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+
+    <nav class="navbar navbar-expand-lg  fixed-top" id="mainNav" style="background-color: black;">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">Career Choice</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">AboutUS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Career Choice</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Contact US</a></li>
+                    {% if request.session.user_name %}
+                    <h2 >{{request.session.user_name}}</h2>
+                    
+                    <li  class="nav-item"><a  class="nav-link" href="logout">Logout</a></li>
+                     {% else %}
+                     <li class="nav-item"><a href="/register" class="nav-link">Register</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <form class="form" action="/feedback" method="post">
+                        {% csrf_token %}
+                        <h3 style="text-align: center;">Feedback</h3>
+
+                        <div class="container">
+                            <form class="form">
+                                <div class="form-group">
+                                  <label for="exampleInputEmail1">Student Name:</label>
+                                  <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                                  
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputEmail1">Branch</label>
+                                  <input type="text" name="branch" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputEmail1">Email address</label>
+                                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                                  
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputPassword1">Mobile No.</label>
+                                  <input type="text" name="Mobileno" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Message</label>
+                                    <textarea class="form-control" name="msg" id="exampleFormControlTextarea1" rows="3" ></textarea>
+                                  </div>
+                                <center><button type="submit" class="btn btn-success" style="margin-top: 30px; width:400px;">Submit</button></center>
+                            {% if messages %}
+                            {% for message in messages%}
+                                  <h4 class="alert alert-success mt-5">{{message}}</h4>
+                            {% endfor%}
+                            {% endif %}  
+                            </form>
+                        </div>
+                        <div class="col-2"></div>
+                </div>
+            </div>
+    </section>
+</body>

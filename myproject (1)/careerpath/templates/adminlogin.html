@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Career Choice</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/static/css/styles.css" rel="stylesheet" />
+    <link href="/static/css/styles2.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- <div class="card" style="width: 18rem; margin:auto; margin-top:450px;">
+
+        <div class="card-body">
+            <h3 style="text-align: center;">LOGIN</h3>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label><br>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div> -->
+    
+        <div class="auth-wrapper">
+            <div class="auth-content">
+                <div class="auth-bg">
+                    <span class="r"></span>
+                    <span class="r s"></span>
+                    <span class="r s"></span>
+                    <span class="r"></span>
+                </div>
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="mb-4">
+                            <i class="feather icon-unlock auth-icon"></i>
+                        </div>
+                        <h3 class="mb-4">
+                            Admin Login
+                        </h3>
+
+                        <!-- <span class="mb-0 text-muted">
+                            Add your credentials
+                        </span> -->
+
+                        <br />
+                        <br />
+
+                        <form role="form" action="/base" >
+                            {% csrf_token%}
+
+                            <div class="input-group mb-3">
+                                <input class="form-control" placeholder="Username" name="name">
+                            </div>
+
+                            <div class="input-group mb-4">
+                                <input type="password" class="form-control" name="password" placeholder="password">
+                            </div>
+
+                            <div class="form-group text-left">
+                                <div class="checkbox checkbox-fill d-inline">
+                                    <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
+                                    <label for="checkbox-fill-a1" class="cr"> Save Details</label>
+                                </div>
+                            </div>
+                            <button name="login" class="btn btn-primary shadow-2 mb-4">Login</button>
+
+                        </form>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body>
+<html>

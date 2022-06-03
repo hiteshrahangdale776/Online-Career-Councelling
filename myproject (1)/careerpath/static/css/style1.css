@@ -1,0 +1,29 @@
+form{
+    border-radius: 8.6px;
+    box-shadow: 0 0 5.9px 0 rgb(0 0 0 / 25%);
+    border: 5px solid #F6BB50 !important;
+    background-color: #ffffff;
+    margin-bottom: 50px;
+    
+    /* height: 500px; */
+}
+form h3{
+    margin: 30px 20px 20px 30px;
+    border-bottom: 1px solid grey;
+}
+form p{
+    text-align: justify;
+    margin: 50px 30px 20px 30px;
+    margin-bottom: 30px;
+    
+    font-size: 19px;
+}
+form label{
+    margin-left: 30px;
+}
+.container{
+    margin-bottom: 20px;
+}
+
+
+

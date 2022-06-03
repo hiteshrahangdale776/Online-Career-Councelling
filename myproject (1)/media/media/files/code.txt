@@ -1,0 +1,14 @@
+// Deluge script for sendmail to prevent spam ot trash rating by gmail
+// duplicate in all sendmail across all applications
+sendmail
+[
+	from :"indiacarz.alerts@carrentalsindia.com"
+	to :input.Booker_Email
+	cc:"alerts.indiacarz@indiacarz.com","indiacarz.reservations@carrentalsindia.com"
+	bcc :"app.coder02@carrentalsindia.com"
+	subject :"Your IndiaCARZ Registration is Received," + input.Booker_Name
+	message :("<div>Dear " + input.Booker_Name) + ",<br></div><div><br></div><div>Your registration Request for IndiaCARZ  has been received. <br></div><div><br></div><div>We will advise & update you once the registration is confirmed by our central despatch team within the 1 business day. <br>  </div><div><br></div>" + "<div>In case you do not have a GST no,  please send us your official billing address as per your company bank account.  This is required for verification. <br></div><div>" + "<div>Thank You, <br></div><div>" + "Central Despatch Team," + " <br></div> Team IndiaCARZ<br></div>" + " <br></div><div>022-41642175 <br></div>"
+]
+//Your Registration request on IndiaCARZ  has been received. We will advise & update you once the registration is confirmed by our central despatch team within the 1 business day.
+
+invoke-rc.d <service> start
